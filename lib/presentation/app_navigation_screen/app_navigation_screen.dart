@@ -34,46 +34,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                           onTapScreenTitle: () =>
                               onTapScreenTitle(AppRoutes.splashScreen),
                         ),
-                        _buildScreenTitle(
-                          login: "Login".tr,
-                          onTapScreenTitle: () =>
-                              onTapScreenTitle(AppRoutes.loginScreen),
-                        ),
-                        _buildScreenTitle(
-                          login: "Register".tr,
-                          onTapScreenTitle: () =>
-                              onTapScreenTitle(AppRoutes.registerScreen),
-                        ),
-                        _buildScreenTitle(
-                          login: "Main landing".tr,
-                          onTapScreenTitle: () =>
-                              onTapScreenTitle(AppRoutes.mainLandingScreen),
-                        ),
-                        _buildScreenTitle(
-                          login: "Product Discover".tr,
-                          onTapScreenTitle: () =>
-                              onTapScreenTitle(AppRoutes.productDiscoverScreen),
-                        ),
-                        _buildScreenTitle(
-                          login: "Product search".tr,
-                          onTapScreenTitle: () =>
-                              onTapScreenTitle(AppRoutes.productSearchScreen),
-                        ),
-                        _buildScreenTitle(
-                          login: "Product detail page".tr,
-                          onTapScreenTitle: () => onTapScreenTitle(
-                              AppRoutes.productDetailPageScreen),
-                        ),
-                        _buildScreenTitle(
-                          login: "Cart".tr,
-                          onTapScreenTitle: () =>
-                              onTapScreenTitle(AppRoutes.cartScreen),
-                        ),
-                        _buildScreenTitle(
-                          login: "Profile - profile info - Tab Container".tr,
-                          onTapScreenTitle: () => onTapScreenTitle(
-                              AppRoutes.profileProfileInfoTabContainerScreen),
-                        ),
+
                       ],
                     ),
                   ),

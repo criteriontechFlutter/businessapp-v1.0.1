@@ -1,33 +1,44 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
+import 'dart:ui';
+import 'package:awesome_notifications/awesome_notifications.dart';
+import 'package:flutter/material.dart';
 import 'core/app_export.dart';
 
 void main() {
+
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-  ]).then((value) {
-    Logger.init(kReleaseMode ? LogMode.live : LogMode.debug);
+  AwesomeNotifications().initialize(
+    'resource://drawable/launch_background',
+    [
+      NotificationChannel(
+        channelKey: 'basic_channel',
+        channelName: 'Basic notifications',
+        channelDescription: 'Notification channel for basic notifications',
+      ),
+    ],
+  );
+
     runApp(MyApp());
-  });
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      scrollBehavior: MaterialScrollBehavior().copyWith(
+        dragDevices: {PointerDeviceKind.mouse, PointerDeviceKind.touch, PointerDeviceKind.stylus, PointerDeviceKind.unknown},
+      ),
       debugShowCheckedModeBanner: false,
       theme: theme,
       translations: AppLocalization(),
-      locale: Get.deviceLocale, //for setting localization strings
+      locale: Get.deviceLocale,
       fallbackLocale: Locale('en', 'US'),
-      title: 'businessapp',
+      title: 'business',
       initialBinding: InitialBindings(),
-      initialRoute: AppRoutes.initialRoute,
+      initialRoute: AppRoutes.splashScreen,
       getPages: AppRoutes.pages,
     );
   }
 }
+
+

@@ -1,0 +1,7 @@
+<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Component 1">
+<rect x="0.5" y="0.5" width="35" height="35" rx="11.5" fill="#4D8C30"/>
+<rect x="0.5" y="0.5" width="35" height="35" rx="11.5" stroke="#4D8C30"/>
+<path id="Vector" d="M22 17.4444V24.8017L17 22.5428L12 24.8017V11.1111H18V9H12C10.9 9 10 9.95 10 11.1111V28L17 24.8333L24 28V17.4444H22ZM26 13.2222H20V11.1111H26V13.2222Z" fill="white"/>
+</g>
+</svg>

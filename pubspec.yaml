@@ -16,15 +16,26 @@ dependencies:
   carousel_slider: ^4.0.0
   smooth_page_indicator: ^1.0.0+2
   intl: ^0.18.0
-dev_dependencies: 
-  flutter_test: 
+  blurrycontainer: ^1.0.2
+  intl_phone_field:
+  pin_code_fields:
+  animated_text_kit: ^4.2.2
+  responsive_grid: ^2.4.4
+  animate_do: ^3.1.2
+  awesome_notifications: ^0.8.2
+  gap: ^3.0.1
+  animated_digit: ^3.2.3
+  flutter_launcher_icons:
+dev_dependencies:
+  flutter_test:
     sdk: flutter
 flutter: 
   uses-material-design: true
   assets: 
     - assets/
     - assets/images/
-  fonts: 
+    - assets/images/logo.png
+  fonts:
     - family: Playfair Display
       fonts: 
         - asset: assets/fonts/PlayfairDisplayRomanMedium.ttf

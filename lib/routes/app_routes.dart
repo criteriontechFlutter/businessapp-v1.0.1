@@ -1,135 +1,184 @@
+import 'package:businessapp/presentation/Contacts/binding/contacts_binding.dart';
+import 'package:businessapp/presentation/Contacts/contacts_view.dart';
+import 'package:businessapp/presentation/Mandi%20rates/binding/mandi_binding.dart';
+import 'package:businessapp/presentation/Mandi%20rates/mandi_rates_view.dart';
+import 'package:businessapp/presentation/Navigation%20bar%20/binding/navigation_binding.dart';
+import 'package:businessapp/presentation/Navigation%20bar%20/view.dart';
+import 'package:businessapp/presentation/dashboard/binding/dasoboard_bindind.dart';
+import 'package:businessapp/presentation/dashboard/dashboard_view.dart';
+import 'package:businessapp/presentation/dealer/binding/dealer_binding.dart';
+import 'package:businessapp/presentation/dealer/dealer_view.dart';
+import 'package:businessapp/presentation/intro/intro_screen.dart';
+import 'package:businessapp/presentation/login/login_view.dart';
+import 'package:businessapp/presentation/mandi/binding/mandi_binding.dart';
+import 'package:businessapp/presentation/mandi/mandi_view.dart';
+import 'package:businessapp/presentation/orders/binding/orders_binding.dart';
+import 'package:businessapp/presentation/orders/order_view.dart';
+import 'package:businessapp/presentation/otp/otp_view.dart';
+import 'package:businessapp/presentation/post%20demand/demand%20submited/demand_submitted_binding.dart';
+import 'package:businessapp/presentation/post%20demand/demand_submitted.dart';
+import 'package:businessapp/presentation/post%20demand/post_demand_view.dart';
+import 'package:businessapp/presentation/product%20comparasion/binding/product_comparasion_binding.dart';
+import 'package:businessapp/presentation/product%20comparasion/product_comparasion_view.dart';
+import 'package:businessapp/presentation/product%20details/bindings/product_details_binding.dart';
+import 'package:businessapp/presentation/product%20details/product_details_view.dart';
+import 'package:businessapp/presentation/registration/binding/registration_binding.dart';
+import 'package:businessapp/presentation/registration/registration_view.dart';
 import 'package:businessapp/presentation/splash_screen/splash_screen.dart';
 import 'package:businessapp/presentation/splash_screen/binding/splash_binding.dart';
-import 'package:businessapp/presentation/login_screen/login_screen.dart';
-import 'package:businessapp/presentation/login_screen/binding/login_binding.dart';
-import 'package:businessapp/presentation/register_screen/register_screen.dart';
-import 'package:businessapp/presentation/register_screen/binding/register_binding.dart';
-import 'package:businessapp/presentation/main_landing_screen/main_landing_screen.dart';
-import 'package:businessapp/presentation/main_landing_screen/binding/main_landing_binding.dart';
-import 'package:businessapp/presentation/product_discover_screen/product_discover_screen.dart';
-import 'package:businessapp/presentation/product_discover_screen/binding/product_discover_binding.dart';
-import 'package:businessapp/presentation/product_search_screen/product_search_screen.dart';
-import 'package:businessapp/presentation/product_search_screen/binding/product_search_binding.dart';
-import 'package:businessapp/presentation/product_detail_page_screen/product_detail_page_screen.dart';
-import 'package:businessapp/presentation/product_detail_page_screen/binding/product_detail_page_binding.dart';
-import 'package:businessapp/presentation/cart_screen/cart_screen.dart';
-import 'package:businessapp/presentation/cart_screen/binding/cart_binding.dart';
-import 'package:businessapp/presentation/profile_profile_info_tab_container_screen/profile_profile_info_tab_container_screen.dart';
-import 'package:businessapp/presentation/profile_profile_info_tab_container_screen/binding/profile_profile_info_tab_container_binding.dart';
-import 'package:businessapp/presentation/app_navigation_screen/app_navigation_screen.dart';
-import 'package:businessapp/presentation/app_navigation_screen/binding/app_navigation_binding.dart';
 import 'package:get/get.dart';
+import '../presentation/intro/binding/intro_binding.dart';
+import '../presentation/login/binding/login_binding.dart';
+import '../presentation/otp/binding/otp_binding.dart';
+import '../presentation/post demand/binding/post_demand_binding.dart';
 
 class AppRoutes {
   static const String splashScreen = '/splash_screen';
+  static const String intro = '/intro_screen';
+  static const String login = '/login';
+  static const String otp = '/otp';
+  static const String registration = '/registration';
+  static const String dashboard = '/dashboard';
+  static const String mandi = '/mandi';
+  static const String dealer = '/dealer';
+  static const String mandiRates = '/mandiRates';
+  static const String order = '/order';
+  static const String ProductDetails = '/ProductDetails';
+  static const String contact = '/contact';
+  static const String navigation = '/navigation';
+  static const String productComparison = '/productComparison';
+  static const String postDemand = '/postDemand';
+  static const String demandSubmitted = '/demandSubmitted';
 
-  static const String loginScreen = '/login_screen';
-
-  static const String registerScreen = '/register_screen';
-
-  static const String mainLandingScreen = '/main_landing_screen';
-
-  static const String productDiscoverScreen = '/product_discover_screen';
-
-  static const String productSearchScreen = '/product_search_screen';
-
-  static const String productDetailPageScreen = '/product_detail_page_screen';
-
-  static const String cartScreen = '/cart_screen';
-
-  static const String profileProfileInfoPage = '/profile_profile_info_page';
-
-  static const String profileProfileInfoTabContainerScreen =
-      '/profile_profile_info_tab_container_screen';
-
-  static const String profileMyOrdersPage = '/profile_my_orders_page';
-
-  static const String profileSecurityPage = '/profile_security_page';
-
-  static const String profileAddressDetailsPage =
-      '/profile_address_details_page';
-
-  static const String appNavigationScreen = '/app_navigation_screen';
-
-  static const String initialRoute = '/initialRoute';
 
   static List<GetPage> pages = [
     GetPage(
       name: splashScreen,
       page: () => SplashScreen(),
+      transition: Transition.rightToLeft,
       bindings: [
         SplashBinding(),
       ],
     ),
     GetPage(
-      name: loginScreen,
+      name: intro,
+      page: () => Intro(),
+      transition: Transition.rightToLeft,
+      bindings: [
+        IntroBinding(),
+      ],
+    ),
+    GetPage(
+      name: login,
       page: () => LoginScreen(),
+      transition: Transition.rightToLeft,
       bindings: [
         LoginBinding(),
       ],
     ),
     GetPage(
-      name: registerScreen,
-      page: () => RegisterScreen(),
+      name: otp,
+      page: () => OTPView(),
+      transition: Transition.rightToLeft,
       bindings: [
-        RegisterBinding(),
+        OTPBinding(),
       ],
     ),
     GetPage(
-      name: mainLandingScreen,
-      page: () => MainLandingScreen(),
+      name: registration,
+      transition: Transition.rightToLeft,
+      page: () => Registration(),
       bindings: [
-        MainLandingBinding(),
+        RegistrationBinding(),
       ],
     ),
     GetPage(
-      name: productDiscoverScreen,
-      page: () => ProductDiscoverScreen(),
+      name: dashboard,
+      transition: Transition.rightToLeft,
+      page: () => DashboardView(),
       bindings: [
-        ProductDiscoverBinding(),
+        DashboardBinding(),
       ],
     ),
     GetPage(
-      name: productSearchScreen,
-      page: () => ProductSearchScreen(),
+      name: mandi,
+      transition: Transition.rightToLeft,
+      page: () => MandiView(),
       bindings: [
-        ProductSearchBinding(),
+        MandiBindings(),
       ],
     ),
     GetPage(
-      name: productDetailPageScreen,
-      page: () => ProductDetailPageScreen(),
+      name: dealer,
+      transition: Transition.rightToLeft,
+      page: () => DealerView(),
       bindings: [
-        ProductDetailPageBinding(),
+        DealerBinding(),
       ],
     ),
     GetPage(
-      name: cartScreen,
-      page: () => CartScreen(),
+      name: mandiRates,
+      transition: Transition.rightToLeft,
+      page: () => MandiRatesView(),
       bindings: [
-        CartBinding(),
+        MandiRatesBinding(),
       ],
     ),
     GetPage(
-      name: profileProfileInfoTabContainerScreen,
-      page: () => ProfileProfileInfoTabContainerScreen(),
+      name: order,
+      transition: Transition.rightToLeft,
+      page: () => OrderView(),
       bindings: [
-        ProfileProfileInfoTabContainerBinding(),
+        OrdersBinding(),
       ],
     ),
     GetPage(
-      name: appNavigationScreen,
-      page: () => AppNavigationScreen(),
+      name: ProductDetails,
+      transition: Transition.rightToLeft,
+      page: () => ProductDetailsView(),
       bindings: [
-        AppNavigationBinding(),
+        ProductDetailsBindings(),
       ],
     ),
     GetPage(
-      name: initialRoute,
-      page: () => SplashScreen(),
+      name: contact,
+      transition: Transition.rightToLeft,
+      page: () => ContactView(),
       bindings: [
-        SplashBinding(),
+        ContactBinding(),
       ],
-    )
+    ),
+    GetPage(
+      name: navigation,
+      transition: Transition.rightToLeft,
+      page: () => BottomNavBarPage(),
+      bindings: [
+        NavigationBinding(),
+      ],
+    ),
+    GetPage(
+      name: productComparison,
+      transition: Transition.rightToLeft,
+      page: () => ProductComparisonView(),
+      bindings: [
+        ProductComparisonBinding(),
+      ],
+    ),    GetPage(
+      name: postDemand,
+      transition: Transition.rightToLeft,
+      page: () => PostDemandView(),
+      bindings: [
+        PostDemandBindind(),
+      ],
+    ),  GetPage(
+      name: demandSubmitted,
+      transition: Transition.rightToLeft,
+      page: () => DemandSubmittedView(),
+      bindings: [
+        DemandSubmittedBinding(),
+      ],
+    ),
+
+
   ];
 }

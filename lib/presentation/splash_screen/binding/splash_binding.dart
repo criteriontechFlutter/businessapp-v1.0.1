@@ -1,13 +1,15 @@
+import 'package:businessapp/presentation/intro/controller/intro_controller.dart';
+import 'package:businessapp/presentation/login/controller/ligin_controller.dart';
+import 'package:businessapp/presentation/login/login_view.dart';
+
 import '../controller/splash_controller.dart';
 import 'package:get/get.dart';
 
-/// A binding class for the SplashScreen.
-///
-/// This class ensures that the SplashController is created when the
-/// SplashScreen is first loaded.
 class SplashBinding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut(() => SplashController());
+    // Get.lazyPut(() => IntroController());
+    // Get.lazyPut(() => LoginController());
   }
 }
